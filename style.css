@@ -144,7 +144,7 @@ footer{padding:14vh 3.5vw 7vh;text-align:center;border-top:1px solid var(--line)
 /* luxury hero wordmark */
 .v-text{display:grid;grid-template-columns:1fr 1fr;column-gap:8vw;align-items:end}
 .v-text .cap,.v-text h2,.v-text .btns{grid-column:1}.v-text .hours{grid-column:2;grid-row:1/4;align-self:end;width:100%;max-width:none;margin-bottom:0}
-.hero .wm{font:300 clamp(64px,8.6vw,150px)/.9 'Cormorant Garamond',serif;letter-spacing:.14em;margin-right:-.14em;color:#f3efe6;
+.hero .wm{font:300 clamp(44px,7vw,140px)/.9 'Cormorant Garamond',serif;letter-spacing:.14em;margin-right:-.14em;color:#f3efe6;
  text-shadow:0 1px 0 rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.55),0 0 42px rgba(212,175,55,.16)}
 .hero-he{font:400 clamp(18px,1.6vw,24px) Bellefair,var(--serif);letter-spacing:.32em;color:#e9e4d8;margin-top:22px;text-shadow:0 4px 18px rgba(0,0,0,.6)}
 .hero-sub{font:300 14px var(--caps);letter-spacing:.2em;color:var(--m);margin:16px 0 40px}
