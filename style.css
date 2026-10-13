@@ -144,12 +144,12 @@ footer{padding:14vh 3.5vw 7vh;text-align:center;border-top:1px solid var(--line)
 /* luxury hero wordmark */
 .v-text{display:grid;grid-template-columns:1fr 1fr;column-gap:8vw;align-items:end}
 .v-text .cap,.v-text h2,.v-text .btns{grid-column:1}.v-text .hours{grid-column:2;grid-row:1/4;align-self:end;width:100%;max-width:none;margin-bottom:0}
-.hero .wm{font:300 clamp(44px,7vw,140px)/.9 'Cormorant Garamond',serif;letter-spacing:.14em;margin-right:-.14em;color:#f3efe6;
+.hero .wm{font:300 clamp(44px,6.6vw,128px)/.9 'Cormorant Garamond',serif;letter-spacing:.14em;margin:0;white-space:nowrap;max-width:100%;color:#f3efe6;
  text-shadow:0 1px 0 rgba(0,0,0,.35),0 10px 30px rgba(0,0,0,.55),0 0 42px rgba(212,175,55,.16)}
 .hero-he{font:400 clamp(18px,1.6vw,24px) Bellefair,var(--serif);letter-spacing:.32em;color:#e9e4d8;margin-top:22px;text-shadow:0 4px 18px rgba(0,0,0,.6)}
 .hero-sub{font:300 14px var(--caps);letter-spacing:.2em;color:var(--m);margin:16px 0 40px}
 .hero-sub span{color:var(--g)}
-.hero-in{text-align:right}
-@media (max-width:860px){.hero .wm{font-size:16vw;letter-spacing:.1em;margin-right:-.1em}.hero-he{font-size:17px;letter-spacing:.24em}
+.hero-in{text-align:right;max-width:min(1100px,100%)}
+@media (max-width:860px){.hero .wm{font-size:14.5vw;letter-spacing:.1em}.hero-he{font-size:17px;letter-spacing:.24em}
  .v-text{grid-template-columns:1fr}.v-text .hours{grid-column:1;grid-row:auto;margin:30px 0}}
 .v-text .cap{text-align:right}
