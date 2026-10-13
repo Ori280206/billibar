@@ -153,3 +153,77 @@ footer{padding:14vh 3.5vw 7vh;text-align:center;border-top:1px solid var(--line)
 @media (max-width:860px){.hero .wm{font-size:14.5vw;letter-spacing:.1em}.hero-he{font-size:17px;letter-spacing:.24em}
  .v-text{grid-template-columns:1fr}.v-text .hours{grid-column:1;grid-row:auto;margin:30px 0}}
 .v-text .cap{text-align:right}
+/* ===== luxury pass — below the hero only ===== */
+:root{--cg:'Cormorant Garamond',serif;--bf:Bellefair,'Frank Ruhl Libre',serif;--hair:rgba(212,175,55,.26)}
+.signature,.house,.collage,.visit,footer{--lux:1}
+.signature h2,.house h2,.collage h2,.visit h2{font-family:var(--bf);font-weight:400;letter-spacing:.01em;line-height:1.04;text-shadow:0 1px 0 rgba(0,0,0,.35),0 12px 34px rgba(0,0,0,.45)}
+.signature em,.house em,.collage em,.visit em{font-family:var(--bf);font-style:normal;font-weight:400;color:var(--g);font-size:1em;letter-spacing:.01em;text-shadow:0 0 30px rgba(212,175,55,.18)}
+.signature .cap,.house .cap,.collage .cap,.visit .cap{display:flex;align-items:center;gap:16px;font:300 11px var(--caps);letter-spacing:.42em;color:#bfa564;margin-bottom:28px}
+.rn{font:italic 300 22px/1 var(--cg);letter-spacing:.04em;color:var(--g)}
+.signature .cap .rn:after,.house .cap .rn:after,.collage .cap .rn:after,.visit .cap .rn:after{content:"";display:inline-block;width:38px;height:1px;background:var(--hair);vertical-align:middle;margin-right:16px}
+.sig-head .cap{justify-content:center}
+/* hairlines */
+.house,.visit,footer,.collage{border-top:1px solid var(--hair)!important}
+.signature{border-top:1px solid var(--hair)}
+/* image framing: gold inner frame + vignette */
+.house-img,.m{position:relative}
+.c-item:before,.house-img:before,.m:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at center,transparent 55%,rgba(10,12,10,.55))}
+.c-item:after,.house-img:after,.m:after{content:"";position:absolute;inset:12px;z-index:2;pointer-events:none;border:1px solid rgba(212,175,55,.32)}
+.house-img:after{inset:22px}
+/* signature */
+.signature{padding:20vh 0 18vh}
+.sig-head{margin-bottom:10vh}
+.sig-head h2{font-size:clamp(52px,5.6vw,96px)}
+.watermark{font-family:var(--cg);font-weight:300;letter-spacing:.12em;color:rgba(245,245,245,.025)}
+.c-num{font:italic 300 26px/1 var(--cg);letter-spacing:.06em;color:var(--g)}.c-num i{font-size:.62em;color:var(--m)}
+.c-title{font-family:var(--bf);font-weight:400;font-size:clamp(44px,3.8vw,66px);margin:18px 0 14px}
+.c-text{font-weight:300;line-height:1.85;color:#a9a59c;max-width:26ch}
+.c-info:before{content:"";display:block;width:44px;height:1px;background:var(--hair);margin:0 0 22px auto}
+.u-link{font:300 13px var(--sans);letter-spacing:.16em}
+/* house */
+.house-detail{padding:18vh 6vw 16vh 5vw}
+.house h2{font-size:clamp(54px,5.4vw,92px);margin-bottom:30px}
+.lead{font:400 clamp(20px,1.6vw,25px)/1.6 var(--bf);color:#d9d4c8;max-width:34ch}
+.num{font:300 1.08em var(--cg);letter-spacing:.04em}
+.traits{margin:60px 0 50px;padding:34px 0;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);gap:24px}
+.trait{grid-template-columns:130px 1fr;font:400 18px var(--bf);letter-spacing:.04em;color:#e6e1d6}
+.dots:before{background:rgba(212,175,55,.2)}
+.dots b{width:8px;height:8px;border-color:rgba(212,175,55,.45)}
+.acc{border-top:0}
+.acc details{border-bottom:1px solid var(--hair)}
+.acc summary{font:400 26px var(--bf);padding:24px 0}
+.acc summary:after{font:300 24px var(--cg)}
+.acc p{line-height:1.9;color:#a9a59c;max-width:42ch}
+.tagline{display:block;font:italic 300 21px var(--cg);color:var(--w);margin-bottom:6px;letter-spacing:.02em}
+.ghost{font:300 13px var(--sans);letter-spacing:.18em;border-color:rgba(212,175,55,.35);padding:17px 36px}
+.ghost:hover{background:rgba(212,175,55,.06)}
+/* collage */
+.col-intro h2{font-size:clamp(56px,5.6vw,100px)}
+.col-end p{font:400 clamp(36px,3vw,52px)/1.1 var(--bf)}
+.col-end p span{font:300 11px var(--caps);letter-spacing:.38em;color:#bfa564;margin-top:22px}
+.circle{border-color:rgba(212,175,55,.4)}
+/* visit */
+.visit{padding:20vh 8vw 18vh}
+.visit h2{font-size:clamp(58px,6vw,108px)}
+.hours div{border-bottom:1px solid var(--hair);padding:18px 0}
+.hours dt,.hours .muted dt{font:400 19px var(--bf)}.hours .muted dt{color:var(--m)}
+.hours dd{font:300 24px var(--cg);letter-spacing:.06em}
+.hours .muted dd{font:400 16px var(--bf);color:var(--m)}
+.visit .btns{margin-top:10px;gap:26px}
+/* footer */
+footer{padding:16vh 8vw 8vh}
+.f-logo{font:300 clamp(56px,9vw,150px)/1 var(--cg);font-style:normal;letter-spacing:.18em;margin-right:-.18em;color:#f3efe6;text-shadow:0 1px 0 rgba(0,0,0,.35),0 12px 34px rgba(0,0,0,.5),0 0 44px rgba(212,175,55,.14)}
+.f-tag{font:300 11px var(--caps);letter-spacing:.42em;color:#bfa564;margin:26px 0 9vh}
+.f-row{font:300 13px var(--sans);letter-spacing:.14em;padding-top:30px;border-top:1px solid var(--hair);max-width:900px;margin:0 auto}
+@media (max-width:860px){
+ .signature{padding:12vh 0 14vh}.sig-head h2{font-size:46px}
+ .c-info:before{margin:0 auto 18px}
+ .house-detail{padding:11vh 7vw}.house h2{font-size:50px}
+ .lead{font-size:20px}
+ .trait{grid-template-columns:96px 1fr;font-size:17px}
+ .col-intro h2{font-size:50px}
+ .visit{padding:12vh 7vw}.visit h2{font-size:54px}
+ .hours dd{font-size:21px}
+ .f-logo{font-size:13vw;letter-spacing:.14em;margin-right:0}
+ .c-item:after,.m:after{inset:8px}.house-img:after{inset:14px}
+}

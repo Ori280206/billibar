@@ -5,11 +5,11 @@ const mobile=()=>innerWidth<=860;
 document.querySelectorAll('.dots').forEach(d=>{const v=+d.dataset.v;for(let i=0;i<5;i++){const b=document.createElement('b');if(i<v)b.className='f';d.appendChild(b)}});
 // carousel
 const data=[
- ['קוקטיילים','בר מלא, כוסות תלויות מעל הראש, והאפי האוור.','לשריין מקום','https://ontopo.com/he/il/page/29160960'],
- ['ביליארד','לבד, מנורות נמוכות ועוד משחק אחד. ואז עוד אחד.','לשריין שולחן','https://ontopo.com/he/il/page/29160960'],
+ ['קוקטיילים','בר מלא, כוסות תלויות, האפי האוור.','לשריין מקום','https://ontopo.com/he/il/page/29160960'],
+ ['ביליארד','לבד, אור נמוך, ועוד משחק אחד.','לשריין שולחן','https://ontopo.com/he/il/page/29160960'],
  ['אוכל','מגשים לשולחן. כשר למהדרין.','לשריין מקום','https://ontopo.com/he/il/page/29160960'],
- ['לילות DJ','שלישי, חמישי ומוצאי שבת. הליינאפ באינסטגרם.','@billibar6','https://instagram.com/billibar6'],
- ['אירועים','ימי הולדת, אירועי חברה, מסיבות רווקות.','עדן 050-573-7094','tel:0505737094']];
+ ['לילות DJ','שלישי, חמישי ומוצאי שבת.','@billibar6','https://instagram.com/billibar6'],
+ ['אירועים','ימי הולדת, חברות ורווקות.','עדן 050-573-7094','tel:0505737094']];
 const items=[...document.querySelectorAll('.c-item')],info=document.querySelector('.c-info');
 let cur=0;
 function layout(){const n=items.length,m=mobile(),gap=m?56:24;
@@ -21,7 +21,7 @@ function layout(){const n=items.length,m=mobile(),gap=m?56:24;
     el.style.transform=`translate(calc(-50% + ${x}vw),-50%) scale(${s})`;
     el.style.opacity=op;el.style.zIndex=10-a;el.classList.toggle('on',a===0);el.style.pointerEvents=(+el.style.opacity>0)?'auto':'none'})}
 function setInfo(){const [t,p,l,h]=data[cur];info.classList.add('out');
-  setTimeout(()=>{info.querySelector('.c-num').textContent=`0${cur+1} / 05`;info.querySelector('.c-title').textContent=t;info.querySelector('.c-text').textContent=p;const a=info.querySelector('.c-link');a.textContent=l;a.href=h;a.target=h.startsWith('http')?'_blank':'';info.classList.remove('out')},SHOT?0:450)}
+  setTimeout(()=>{info.querySelector('.c-num').innerHTML=['I','II','III','IV','V'][cur]+' <i>/ V</i>';info.querySelector('.c-title').textContent=t;info.querySelector('.c-text').textContent=p;const a=info.querySelector('.c-link');a.textContent=l;a.href=h;a.target=h.startsWith('http')?'_blank':'';info.classList.remove('out')},SHOT?0:450)}
 function go(d){cur=(cur+d+items.length)%items.length;layout();setInfo()}
 document.querySelectorAll('.c-ctrl button').forEach(b=>b.onclick=()=>go(+b.dataset.dir));
 items.forEach((el,i)=>el.onclick=()=>{if(i!==cur){cur=i;layout();setInfo()}});
